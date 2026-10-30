@@ -1,3 +1,4 @@
+import { BRAND_NAME } from '../constants';
 import { getHasFIDO2Enabled, getHasTOTPEnabled } from '../authentication/twoFactor';
 import type { UserSettings } from '../interfaces';
 
@@ -27,7 +28,7 @@ interface GetUriArguments {
 export const getUri = ({
     identifier,
     sharedSecret,
-    issuer = 'ProtonMail',
+    issuer = BRAND_NAME,
     digits = 6,
     algorithm = 'SHA1',
     period = 30,
@@ -40,7 +41,7 @@ export const getTOTPData = (identifier: string, sharedSecret: string) => {
     const digits = TOTP_CONFIG.DIGITS;
     const uri = getUri({
         identifier,
-        issuer: 'Proton',
+        issuer: BRAND_NAME,
         sharedSecret,
         period,
         digits,
