@@ -7,9 +7,9 @@ module.exports = {
     // TODO provide real maskable icon
     logoMaskable: path.resolve('./src/favicon.svg'),
     favicons: {
-        appName: 'Proton Pass Web App',
+        appName: 'Euroton Pass',
         appDescription:
-            'Proton Pass is an open source, end-to-end encrypted password manager app. Create and store passwords, email aliases, 2FA codes, and notes on all your devices',
+            'Euroton Pass is the end-to-end encrypted password manager surface of a self-hosted, openly licensed platform forked from Proton Pass.',
     },
     url,
     ogImage: `${url}assets/proton-og-image.png`,

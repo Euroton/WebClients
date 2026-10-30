@@ -6,9 +6,9 @@ module.exports = {
     logo: path.resolve('./src/favicon.svg'),
     logoMaskable: path.resolve('./src/icon-maskable.svg'),
     favicons: {
-        appName: 'Proton VPN',
+        appName: 'Euroton VPN',
         appDescription:
-            'Proton VPN is a security focused FREE VPN service, developed by CERN and MIT scientists. Use the web anonymously, unblock websites & encrypt your connection.',
+            'Euroton VPN-Settings is the VPN configuration surface of a self-hosted, openly licensed platform forked from Proton VPN.',
     },
     url,
     ogImage: `${url}assets/proton-og-image.png`,
