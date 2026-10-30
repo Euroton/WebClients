@@ -6,9 +6,9 @@ module.exports = {
     logo: path.resolve('./src/favicon.svg'),
     logoMaskable: path.resolve('./src/icon-maskable.svg'),
     favicons: {
-        appName: 'Proton Mail',
+        appName: 'Euroton Mail',
         appDescription:
-            'Proton Mail is based in Switzerland and uses advanced encryption to keep your data safe. Apps available for Android, iOS, and desktop devices.',
+            'Euroton Mail is a self-hosted, openly licensed mail platform forked from Proton Mail. Encrypted by default.',
     },
     url,
     ogImage: `${url}assets/proton-og-image.png`,
