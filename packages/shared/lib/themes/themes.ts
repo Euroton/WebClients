@@ -86,7 +86,7 @@ type ThemeDefinition = {
 
 export const PROTON_THEMES_MAP: Record<ThemeTypes, ThemeDefinition> = {
     [ThemeTypes.Duotone]: {
-        label: 'Proton',
+        label: 'Swisston',
         identifier: ThemeTypes.Duotone,
         themeColorMeta: '#1b1340',
         thumbColors: {
