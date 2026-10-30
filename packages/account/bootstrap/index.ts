@@ -46,6 +46,7 @@ import {
 } from '@proton/shared/lib/authentication/pathnameHelper';
 import type { ResumedSessionResult } from '@proton/shared/lib/authentication/persistedSessionHelper';
 import { resumeSession } from '@proton/shared/lib/authentication/persistedSessionHelper';
+import { getPersistedSessions } from '@proton/shared/lib/authentication/persistedSessionStorage';
 import { getReturnUrlParameter } from '@proton/shared/lib/authentication/returnUrl';
 import { newVersionUpdater } from '@proton/shared/lib/busy';
 import { getProdId, setVcalProdId } from '@proton/shared/lib/calendar/vcalConfig';
@@ -235,7 +236,23 @@ export const loadSession = async <IncludeUser extends boolean = false>({
             }
 
             // Having a previously persisted localID potentially avoids a redirect to account.
-            const lastUsedLocalID = getLastUsedLocalID();
+            let lastUsedLocalID = getLastUsedLocalID();
+            // EUROTON ADR 096: if the llid cache is empty, fall back to
+            // the most recently persisted session at this origin. The
+            // AUTHORIZE SSO flow (account-eur as login portal) calls
+            // finalizeLogin -> persistSession then replaceUrls to the
+            // child app without ever running loadSession's
+            // setLastUsedLocalID — so a later direct-URL load of
+            // account-eur fails despite localStorage holding a usable
+            // session.
+            if (!extra.email && lastUsedLocalID < 0) {
+                const persisted = getPersistedSessions().sort(
+                    (a, b) => (b.persistedAt || 0) - (a.persistedAt || 0)
+                );
+                if (persisted[0]) {
+                    lastUsedLocalID = persisted[0].localID;
+                }
+            }
             // If specifying an email address, ignore the last used local id. We don't know if that local id maps
             // to the email since we don't store all addresses.
             if (!extra.email && lastUsedLocalID >= 0) {
