@@ -538,7 +538,7 @@ export const getDefaultThemeSetting = (themeType?: ThemeTypes): ThemeSetting => 
 };
 
 const getValidatedThemeType = (themeType: number): ThemeTypes | undefined => {
-    if (themeType >= ThemeTypes.Duotone && themeType <= ThemeTypes.LumoLight) {
+    if (themeType >= ThemeTypes.Duotone && themeType <= ThemeTypes.SolarizedLight) {
         return themeType;
     }
 };
