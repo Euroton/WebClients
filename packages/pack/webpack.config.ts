@@ -24,6 +24,14 @@ export const getConfig = (webpackOptions: WebpackOptions): Configuration => {
     return {
         bail: webpackOptions.isProduction,
         devServer: {
+            server: {
+                type: 'https',
+                options: {
+                    key: '/etc/euroton/ssl/euroton.key',
+                    cert: '/etc/euroton/ssl/euroton.crt',
+                },
+            },
+            host: '0.0.0.0',
             allowedHosts: 'all',
             client: {
                 overlay: {
@@ -48,6 +56,7 @@ export const getConfig = (webpackOptions: WebpackOptions): Configuration => {
                     {
                         changeOrigin: true,
                         context: ['/api', '/internal-api'],
+                        pathRewrite: { '^/api': '', '^/internal-api': '' },
                         onProxyRes: (proxyRes) => {
                             delete proxyRes.headers['content-security-policy'];
                             delete proxyRes.headers['x-frame-options'];
@@ -55,7 +64,7 @@ export const getConfig = (webpackOptions: WebpackOptions): Configuration => {
                                 cookies
                                     .split('; ')
                                     .filter((cookie) => {
-                                        return !/(secure$|samesite=|domain=)/i.test(cookie);
+                                        return !/(domain=)/i.test(cookie);
                                     })
                                     .join('; ')
                             );
