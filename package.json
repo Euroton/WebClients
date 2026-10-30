@@ -3,17 +3,12 @@
     "private": true,
     "license": "GPL-3.0",
     "workspaces": [
-        "applications/*",
+        "applications/mail",
+        "applications/account",
         "applications/lumo/src/app/lib/lumo-api-client",
-        "applications/pass-desktop/native",
         "packages/*",
         "packages/wasm/*",
-        "packages/pass/docs/starlight",
-        "tests",
-        "tests/mail-renderer",
-        "tests/packages/*",
-        "utilities/*",
-        "vendor/*/*"
+        "tests/packages/*"
     ],
     "scripts": {
         "app-versions": "bash utilities/app-versions/app-versions.sh",
