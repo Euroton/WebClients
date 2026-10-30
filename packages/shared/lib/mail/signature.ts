@@ -3,18 +3,19 @@ import { c } from 'ttag';
 import type { VERIFICATION_STATUS } from '@protontech/crypto/constants';
 
 import { APPS, APPS_CONFIGURATION } from '../constants';
+import { getStaticURL } from '../helpers/url';
 import type { MAIL_VERIFICATION_STATUS } from './constants';
 
 const getPmSignatureLink = (pmSignatureReferralLinkEnabled: boolean, referralLink: string) => {
     if (pmSignatureReferralLinkEnabled && referralLink) {
         return referralLink;
     }
-    return 'https://proton.me/mail/home';
+    return getStaticURL('/mail/home');
 };
 
 export const getProtonMailSignature = (
     pmSignatureReferralLinkEnabled = false,
-    referralLink = 'https://proton.me/mail/home',
+    referralLink = getStaticURL('/mail/home'),
     pmSignatureContent = ''
 ): string => {
     if (pmSignatureContent) {
