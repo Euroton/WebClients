@@ -16,6 +16,11 @@ export enum ThemeTypes {
     WalletDark = 13,
     LumoLight = 14,
     LumoDark = 15,
+    Dracula = 16,
+    Nord = 17,
+    Gruvbox = 18,
+    SolarizedDark = 19,
+    SolarizedLight = 20,
 }
 
 export enum ThemeModeSetting {

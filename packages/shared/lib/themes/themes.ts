@@ -47,13 +47,23 @@ import storefrontTheme from '@proton/colors/themes/dist/storefront.theme.css';
 import walletDarkTheme from '@proton/colors/themes/dist/wallet-dark.theme.css';
 // @ts-ignore
 import walletLightTheme from '@proton/colors/themes/dist/wallet-light.theme.css';
+// @ts-ignore
+import draculaTheme from '@proton/colors/themes/dist/dracula.theme.css';
+// @ts-ignore
+import nordTheme from '@proton/colors/themes/dist/nord.theme.css';
+// @ts-ignore
+import gruvboxTheme from '@proton/colors/themes/dist/gruvbox.theme.css';
+// @ts-ignore
+import solarizedDarkTheme from '@proton/colors/themes/dist/solarized-dark.theme.css';
+// @ts-ignore
+import solarizedLightTheme from '@proton/colors/themes/dist/solarized-light.theme.css';
 
 export const DESKTOP_THEME_TYPES = {
     Carbon: ThemeTypes.Carbon,
     Snow: ThemeTypes.Snow,
 } as const;
 
-export const PROTON_DEFAULT_THEME = ThemeTypes.Duotone;
+export const PROTON_DEFAULT_THEME = ThemeTypes.Monokai;
 
 type ThemeDefinition = {
     /**
@@ -277,6 +287,66 @@ export const PROTON_THEMES_MAP: Record<ThemeTypes, ThemeDefinition> = {
         },
         theme: lumoDarkTheme.toString(),
     },
+    [ThemeTypes.Dracula]: {
+        label: 'Dracula',
+        identifier: ThemeTypes.Dracula,
+        themeColorMeta: '#282a36',
+        thumbColors: {
+            prominent: '#21222c',
+            standard: '#282a36',
+            primary: '#bd93f9',
+            weak: '#6272a4',
+        },
+        theme: draculaTheme.toString(),
+    },
+    [ThemeTypes.Nord]: {
+        label: 'Nord',
+        identifier: ThemeTypes.Nord,
+        themeColorMeta: '#2e3440',
+        thumbColors: {
+            prominent: '#272c36',
+            standard: '#2e3440',
+            primary: '#88c0d0',
+            weak: '#4c566a',
+        },
+        theme: nordTheme.toString(),
+    },
+    [ThemeTypes.Gruvbox]: {
+        label: 'Gruvbox',
+        identifier: ThemeTypes.Gruvbox,
+        themeColorMeta: '#282828',
+        thumbColors: {
+            prominent: '#1d2021',
+            standard: '#282828',
+            primary: '#fe8019',
+            weak: '#665c54',
+        },
+        theme: gruvboxTheme.toString(),
+    },
+    [ThemeTypes.SolarizedDark]: {
+        label: 'Solarized Dark',
+        identifier: ThemeTypes.SolarizedDark,
+        themeColorMeta: '#002b36',
+        thumbColors: {
+            prominent: '#00212b',
+            standard: '#002b36',
+            primary: '#268bd2',
+            weak: '#586e75',
+        },
+        theme: solarizedDarkTheme.toString(),
+    },
+    [ThemeTypes.SolarizedLight]: {
+        label: 'Solarized Light',
+        identifier: ThemeTypes.SolarizedLight,
+        themeColorMeta: '#fdf6e3',
+        thumbColors: {
+            prominent: '#fdf6e3',
+            standard: '#eee8d5',
+            primary: '#268bd2',
+            weak: '#93a1a1',
+        },
+        theme: solarizedLightTheme.toString(),
+    },
 } as const;
 
 export const getDarkThemes = () => [
@@ -285,6 +355,10 @@ export const getDarkThemes = () => [
     ThemeTypes.ContrastDark,
     ThemeTypes.PassDark,
     ThemeTypes.WalletDark,
+    ThemeTypes.Dracula,
+    ThemeTypes.Nord,
+    ThemeTypes.Gruvbox,
+    ThemeTypes.SolarizedDark,
 ];
 
 export const getProminentHeaderThemes = () => [ThemeTypes.Classic, ThemeTypes.Legacy];
@@ -296,14 +370,21 @@ export const getThemes = () => {
     }
 
     return [
+        // Euroton custom themes first (ADR 244)
+        ThemeTypes.Dracula,
+        ThemeTypes.Nord,
+        ThemeTypes.Gruvbox,
+        ThemeTypes.SolarizedDark,
+        ThemeTypes.SolarizedLight,
+        ThemeTypes.Monokai,
+        ThemeTypes.Carbon,
+        ThemeTypes.ContrastDark,
+        ThemeTypes.ContrastLight,
+        // Proton blue/purple themes last
         ThemeTypes.Duotone,
         ThemeTypes.Classic,
         ThemeTypes.Snow,
         ThemeTypes.Legacy,
-        ThemeTypes.Carbon,
-        ThemeTypes.Monokai,
-        ThemeTypes.ContrastDark,
-        ThemeTypes.ContrastLight,
     ].map((id) => PROTON_THEMES_MAP[id]);
 };
 

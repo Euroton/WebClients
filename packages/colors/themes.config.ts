@@ -281,6 +281,51 @@ const config: ThemeConfig[] = [
             },
         ],
     },
+    {
+        output: './themes/dist/dracula.theme.css',
+        files: [
+            {
+                path: './themes/src/dracula/standard-base.css',
+                type: 'dark',
+            },
+        ],
+    },
+    {
+        output: './themes/dist/nord.theme.css',
+        files: [
+            {
+                path: './themes/src/nord/standard-base.css',
+                type: 'dark',
+            },
+        ],
+    },
+    {
+        output: './themes/dist/gruvbox.theme.css',
+        files: [
+            {
+                path: './themes/src/gruvbox/standard-base.css',
+                type: 'dark',
+            },
+        ],
+    },
+    {
+        output: './themes/dist/solarized-dark.theme.css',
+        files: [
+            {
+                path: './themes/src/solarized-dark/standard-base.css',
+                type: 'dark',
+            },
+        ],
+    },
+    {
+        output: './themes/dist/solarized-light.theme.css',
+        files: [
+            {
+                path: './themes/src/solarized-light/standard-base.css',
+                type: 'light',
+            },
+        ],
+    },
 ];
 
 export default config;
