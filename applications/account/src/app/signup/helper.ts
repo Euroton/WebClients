@@ -97,7 +97,7 @@ export const getOptimisticDomains = () => {
     if (secondLevelDomain.endsWith('.onion') || secondLevelDomain.includes('protonvpn')) {
         secondLevelDomain = 'proton.me';
     }
-    return [secondLevelDomain, 'protonmail.com'];
+    return [secondLevelDomain];
 };
 
 export const getPaymentTokenForExternalUsers = (
