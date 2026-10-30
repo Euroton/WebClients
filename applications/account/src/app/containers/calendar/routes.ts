@@ -34,7 +34,7 @@ export const getCalendarAppRoutes = ({ app, user, organization, flags }: Organiz
         routes: {
             desktop: {
                 id: 'desktop',
-                available: !isElectronMail,
+                available: false,
                 text: c('Title').t`Get the apps`,
                 to: CALENDAR_SETTINGS_ROUTE.GET_APPS,
                 icon: 'arrow-down-line',

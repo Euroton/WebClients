@@ -48,7 +48,7 @@ export const getMailAppRoutes = ({
         routes: {
             desktop: {
                 id: 'desktop',
-                available: !isElectronMail,
+                available: false,
                 text: mailRouteTitles.desktop,
                 to: '/get-the-apps',
                 icon: 'arrow-down-line',
