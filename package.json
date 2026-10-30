@@ -8,6 +8,7 @@
         "applications/pass",
         "applications/vpn-settings",
         "applications/wallet",
+        "applications/calendar",
         "applications/lumo/src/app/lib/lumo-api-client",
         "packages/*",
         "packages/wasm/*",
