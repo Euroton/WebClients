@@ -5,6 +5,9 @@
     "workspaces": [
         "applications/mail",
         "applications/account",
+        "applications/pass",
+        "applications/vpn-settings",
+        "applications/wallet",
         "applications/lumo/src/app/lib/lumo-api-client",
         "packages/*",
         "packages/wasm/*",
