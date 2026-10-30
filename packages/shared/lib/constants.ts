@@ -25,7 +25,7 @@ export const EMAIL_PLACEHOLDER = 'john.doe@example.com';
 export const USERNAME_PLACEHOLDER = 'john.doe';
 export const NAME_PLACEHOLDER = 'Thomas A. Anderson';
 
-export const BRAND_NAME = 'Proton';
+export const BRAND_NAME = 'Euroton';
 export const MAIL_SHORT_APP_NAME = 'Mail';
 export const MAIL_APP_NAME = `${BRAND_NAME} ${MAIL_SHORT_APP_NAME}`;
 export const CONTACTS_SHORT_APP_NAME = 'Contacts';
@@ -103,7 +103,7 @@ export const APPS_CONFIGURATION: { [key in APP_NAMES]: AppConfiguration } = {
     [APPS.PROTONACCOUNT]: {
         publicPath: '',
         subdomain: 'account',
-        name: 'Proton Account',
+        name: ACCOUNT_APP_NAME,
         bareName: 'Account',
         clientID: 'web-account',
         icon: 'brand-proton',
@@ -113,7 +113,7 @@ export const APPS_CONFIGURATION: { [key in APP_NAMES]: AppConfiguration } = {
     [APPS.PROTONACCOUNTLITE]: {
         publicPath: '',
         subdomain: 'account',
-        name: 'Proton Account',
+        name: ACCOUNT_APP_NAME,
         bareName: 'Account',
         clientID: 'web-account-lite',
         windowsClientID: 'windows-mail',
