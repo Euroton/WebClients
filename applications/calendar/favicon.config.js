@@ -6,9 +6,9 @@ module.exports = {
     logo: path.resolve('./src/favicon.svg'),
     logoMaskable: path.resolve('./src/icon-maskable.svg'),
     favicons: {
-        appName: 'Proton Calendar',
+        appName: 'Euroton Calendar',
         appDescription:
-            'Proton Calendar helps you stay on top of your schedule while protecting your data. Apps available for Android, iOS, and the web.',
+            'Euroton Calendar is the calendar surface of a self-hosted, openly licensed mail + calendar platform forked from Proton.',
     },
     url,
     ogImage: `${url}assets/proton-og-image.png`,
