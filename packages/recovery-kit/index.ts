@@ -70,7 +70,7 @@ const exportedTemplate = {
                 characterSpacing: 0,
                 lineHeight: 1,
                 fontName: 'interBold',
-                fontColor: '#6d4aff',
+                fontColor: '#d6362c',
                 name: 'email title',
             },
             {
