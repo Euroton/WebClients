@@ -63,8 +63,7 @@ const Checkout = ({
                     <span className="shrink-0 mr-2">
                         <IcShield />
                     </span>
-                    <span className="flex-1">{c('Info')
-                        .t`Payments are protected with TLS encryption and Swiss privacy laws.`}</span>
+                    <span className="flex-1">{c('Info').t`Payments are protected with TLS encryption.`}</span>
                 </div>
                 {hasGuarantee && (
                     <div className="flex flex-nowrap color-weak">

@@ -22,19 +22,18 @@ export const getJoinString = (audience?: Audience) => {
     if (audience === Audience.B2B) {
         return getJoinB2BString();
     }
-    return c('pass_signup_2023: Info')
-        .t`Join over 100 million people who have chosen ${BRAND_NAME} to stay safe online`;
+    return c('pass_signup_2023: Info').t`Run ${BRAND_NAME} on a server you control`;
 };
 
 export const getBasedString = () => {
-    return c('pass_signup_2023: Info').t`Based in Switzerland, GDPR compliant`;
+    return c('pass_signup_2023: Info').t`Self-hosted: your data stays on your server`;
 };
 
 export const getGenericBenefits = (): BenefitItem[] => {
     return [
         {
             key: 10,
-            text: c('pass_signup_2023: Info').t`Protected by Swiss privacy laws`,
+            text: c('pass_signup_2023: Info').t`Hosted on your own server`,
             icon: {
                 name: 'shield',
             },
@@ -72,7 +71,7 @@ export const getEndToEndEncryptionBenefit = (): BenefitItem => {
 export const getSwissPrivacyLawsBenefit = (): BenefitItem => {
     return {
         key: `swiss-privacy-laws`,
-        text: c('Signup: Info').t`Protected by Swiss privacy laws`,
+        text: c('Signup: Info').t`Hosted on your own server`,
         icon: {
             name: 'shield',
         },
@@ -102,7 +101,7 @@ export const getISO27001CertifiedBenefit = (): BenefitItem => {
 export const getBasedInSwitzerlandGDPRBenefit = (): BenefitItem => {
     return {
         key: `based-in-switzerland-gdpr`,
-        text: c('Signup: Info').t`Based in Switzerland, GDPR compliant`,
+        text: c('Signup: Info').t`Self-hosted: your data stays on your server`,
         icon: {
             name: 'shield',
         },
@@ -233,8 +232,8 @@ export const getSwissFeature = ({ fullText }: { fullText: boolean }) => ({
     key: 'swiss',
     left: <img width="24" alt="" src={swissFlag} className="rounded-sm" />,
     text: fullText
-        ? c('pass_signup_2023: Feature').t`Protected by Swiss privacy laws`
-        : c('pass_signup_2023: Feature').t`Swiss based`,
+        ? c('pass_signup_2023: Feature').t`Hosted on your own server`
+        : c('pass_signup_2023: Feature').t`Self-hosted`,
 });
 
 export const getEncryptedFeature = ({ e2ee }: { e2ee: boolean }) => ({

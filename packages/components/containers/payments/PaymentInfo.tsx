@@ -18,10 +18,7 @@ const PaymentInfo = ({ paymentMethodType }: Props) => {
         return null;
     }
 
-    return (
-        <div className="mb-4">{c('Info')
-            .t`Your payment details are protected with TLS encryption and Swiss privacy laws.`}</div>
-    );
+    return <div className="mb-4">{c('Info').t`Your payment details are protected with TLS encryption.`}</div>;
 };
 
 export default PaymentInfo;

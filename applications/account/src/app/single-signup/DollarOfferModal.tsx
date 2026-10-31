@@ -121,7 +121,7 @@ const DollarOfferModal = ({
                                     <RatingsSection className="mb-4" />
                                     <div className="flex items-center justify-center gap-2 text-sm color-weak">
                                         <img width="20" alt="" src={swissFlag} className="rounded-sm" />
-                                        <span>{c('dollar_offer').t`Protected by Swiss privacy laws`}</span>
+                                        <span>{c('dollar_offer').t`Hosted on your own server`}</span>
                                     </div>
                                     <div className="text-center mt-4">
                                         <p className="text-sm color-weak m-0">

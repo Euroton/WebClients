@@ -2,9 +2,7 @@ import type { ReactNode } from 'react';
 
 import { c } from 'ttag';
 
-import { Href } from '@proton/atoms/Href/Href';
 import { BRAND_NAME } from '@proton/shared/lib/constants';
-import { getStaticURL } from '@proton/shared/lib/helpers/url';
 import clsx from '@proton/utils/clsx';
 
 import LayoutLogosV2 from '../public/LayoutLogosV2';
@@ -32,14 +30,7 @@ const PublicFooter = ({ children, className, center = true, includeDescription =
                 <>
                     <div className="color-weak">
                         {c('Info')
-                            .t`${BRAND_NAME} is privacy you can trust, ensured by strong encryption, open-source code, and Swiss privacy laws. We believe nobody should be able to exploit your data, period. Our technology and business are based upon this fundamentally stronger definition of privacy.`}
-                    </div>
-                    <br />
-                    <div className="mb-6 color-weak">
-                        {c('Info').t`Over 100 million people and businesses have signed up for ${BRAND_NAME}.`}{' '}
-                        <Href className="color-weak" href={getStaticURL('')}>
-                            {c('Link').t`Learn more`}
-                        </Href>
+                            .t`${BRAND_NAME} is privacy you can trust, ensured by strong encryption, open-source code, and a server you control. We believe nobody should be able to exploit your data, period. Our technology and business are based upon this fundamentally stronger definition of privacy.`}
                     </div>
                 </>
             )}

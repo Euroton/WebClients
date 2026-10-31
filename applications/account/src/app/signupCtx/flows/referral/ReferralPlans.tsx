@@ -61,9 +61,9 @@ const ReferralPlans = () => {
                     <p className="mt-0 mb-10 text-center max-w-custom" style={{ '--max-w-custom': '30rem' }}>
                         {referrerName
                             ? c('Signup')
-                                  .t`${referrerName} is inviting you to join 100M+ people who chose to stay in control of their data with ${BRAND_NAME}'s encrypted ecosystem.`
+                                  .t`${referrerName} is inviting you to stay in control of their data with ${BRAND_NAME}'s encrypted ecosystem.`
                             : c('Signup')
-                                  .t`You’re invited to join 100M+ people who chose to stay in control of their data with ${BRAND_NAME}'s encrypted ecosystem.`}{' '}
+                                  .t`You’re invited to stay in control of their data with ${BRAND_NAME}'s encrypted ecosystem.`}{' '}
                         {c('Signup').t`Pick a service to get started.`}
                     </p>
 

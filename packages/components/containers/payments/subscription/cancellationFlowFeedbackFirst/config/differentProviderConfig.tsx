@@ -76,7 +76,7 @@ const getB2CFeatures = (): ComparisonFeatureRow[] => {
             rightValue: <No />,
         },
         {
-            label: c('Label').t`Protected by Swiss privacy laws`,
+            label: c('Label').t`Hosted on your own server`,
             leftValue: <Yes />,
             rightValue: <No />,
         },
@@ -128,7 +128,7 @@ const getB2BFeatures = (): ComparisonFeatureRow[] => {
             rightValue: <No />,
         },
         {
-            label: c('Label').t`Protected by Swiss privacy laws`,
+            label: c('Label').t`Hosted on your own server`,
             leftValue: <Yes />,
             rightValue: <No />,
         },

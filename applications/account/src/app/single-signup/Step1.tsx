@@ -753,7 +753,7 @@ const Step1 = ({
         },
         {
             left: <img width="24" alt="" src={swissFlag} className="rounded-sm" />,
-            text: viewportWidth['>=large'] ? c('Info').t`Protected by Swiss privacy laws` : c('Info').t`Swiss based`,
+            text: viewportWidth['>=large'] ? c('Info').t`Hosted on your own server` : c('Info').t`Self-hosted`,
         },
         viewportWidth['>=large'] &&
             [PLANS.VPN2024, PLANS.VPN_PASS_BUNDLE, PLANS.BUNDLE].includes(selectedPlan.Name as any) && {
